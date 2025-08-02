@@ -3,7 +3,7 @@ export const GrowthStrategySlide = () => {
     {
       title: "Events",
       description: "Participate in technology fairs like FEBRACE and Campus Party to showcase our product.",
-      icon: "🎪"
+      icon: "💻"
     },
     {
       title: "Content",

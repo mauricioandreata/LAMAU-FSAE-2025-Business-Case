@@ -4,9 +4,10 @@ import { cn } from "@/lib/utils";
 interface AnimatedSectionProps {
   children: ReactNode;
   className?: string;
+  animationClass?: string;
 }
 
-export const AnimatedSection = ({ children, className }: AnimatedSectionProps) => {
+export const AnimatedSection = ({ children, className, animationClass }: AnimatedSectionProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const [hasAnimated, setHasAnimated] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
@@ -42,7 +43,7 @@ export const AnimatedSection = ({ children, className }: AnimatedSectionProps) =
       className={cn(
         "min-h-screen w-full flex flex-col justify-center items-center relative px-4 md:px-8 py-16 transition-all duration-1000",
         isVisible ? "opacity-100" : "opacity-0",
-        hasAnimated && isVisible ? "animate-elastic-in" : "",
+        hasAnimated && isVisible && animationClass, // <- animação aplicada aqui
         className
       )}
     >

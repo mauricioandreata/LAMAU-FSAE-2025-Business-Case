@@ -5,6 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: "/LAMAU-FSAE-2025-Business-Case/", // 👈 ADICIONADO AQUI
   server: {
     host: "::",
     port: 8080,

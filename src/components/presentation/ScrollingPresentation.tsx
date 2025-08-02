@@ -45,35 +45,35 @@ export const ScrollingPresentation = () => {
       
       {/* Content sections */}
       <div className="relative z-10">
-        <AnimatedSection>
+        <AnimatedSection animationClass="animate-slide-up">
           <TitleSlide />
         </AnimatedSection>
 
-        <AnimatedSection>
+        <AnimatedSection animationClass="animate-fade-in-left">
           <ProblemSolutionSlide />
         </AnimatedSection>
 
-        <AnimatedSection>
+        <AnimatedSection animationClass="animate-fade-in-right">
           <MVPSlide />
         </AnimatedSection>
 
-        <AnimatedSection>
+        <AnimatedSection animationClass="animate-slide-up">
           <MarketFinancialsSlide />
         </AnimatedSection>
 
-        <AnimatedSection>
+        <AnimatedSection animationClass="animate-slide-in-blur">
           <GrowthStrategySlide />
         </AnimatedSection>
 
-        <AnimatedSection>
+        <AnimatedSection animationClass="animate-scale-in">
           <MarketAnalysisSlide />
         </AnimatedSection>
 
-        <AnimatedSection>
+        <AnimatedSection animationClass="animate-slide-up">
           <RecyclingSlide />
         </AnimatedSection>
 
-        <AnimatedSection>
+        <AnimatedSection animationClass="animate-fade-in-left">
           <MetricsTableSlide
             title="Metrics and Estimates"
             subtitle="Positive Scenario - BRL"
@@ -83,7 +83,7 @@ export const ScrollingPresentation = () => {
           />
         </AnimatedSection>
 
-        <AnimatedSection>
+        <AnimatedSection animationClass="animate-fade-in-right">
           <MetricsTableSlide
             title="Metrics and Estimates"
             subtitle="Positive Scenario - USD (5.54 BRL as of 08/01/2025)"
@@ -93,7 +93,7 @@ export const ScrollingPresentation = () => {
           />
         </AnimatedSection>
 
-        <AnimatedSection>
+        <AnimatedSection animationClass="animate-fade-in-left">
           <MetricsTableSlide
             title="Metrics and Estimates"
             subtitle="Realistic Scenario - BRL"
@@ -103,7 +103,7 @@ export const ScrollingPresentation = () => {
           />
         </AnimatedSection>
 
-        <AnimatedSection>
+        <AnimatedSection animationClass="animate-fade-in-right">
           <MetricsTableSlide
             title="Metrics and Estimates"
             subtitle="Realistic Scenario - USD (5.54 BRL as of 08/01/2025)"
@@ -113,7 +113,7 @@ export const ScrollingPresentation = () => {
           />
         </AnimatedSection>
 
-        <AnimatedSection>
+        <AnimatedSection animationClass="animate-fade-in-left">
           <MarketStudySlide />
         </AnimatedSection>
       </div>

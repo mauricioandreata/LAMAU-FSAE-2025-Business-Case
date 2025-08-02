@@ -1,11 +1,11 @@
 export const ProblemSolutionSlide = () => {
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-7xl mx-auto">
       <h3 className="text-3xl md:text-5xl font-bold mb-12 text-center text-gradient-primary animate-fade-in">
         The Problem & Our Solution
       </h3>
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <div className="grid grid-cols-1 lg:[grid-template-columns:0.4fr_0.6fr] gap-12 items-start">
         <div className="space-y-8 animate-fade-in-left">
           <div className="card-content">
             <h4 className="text-2xl md:text-3xl font-bold mb-4 text-gradient-secondary">
@@ -31,9 +31,13 @@ export const ProblemSolutionSlide = () => {
         <div className="animate-fade-in-right">
           <div className="card-content h-full flex items-center justify-center min-h-[400px]">
             <div className="text-center">
-              <div className="w-full h-64 bg-gradient-to-br from-muted to-muted/50 rounded-xl flex items-center justify-center mb-4">
-                <div className="text-6xl">📊</div>
-              </div>
+            <div className="w-full max-w-xl aspect-[4/3] rounded-xl overflow-hidden shadow-md bg-muted/30 mb-4">
+              <img
+                src="/images/battery-graph.png"
+                alt="Battery Discharge Cycle Graph"
+                className="w-full h-full object-contain"
+              />
+            </div>
               <p className="text-sm text-muted-foreground">
                 Battery Discharge Cycle Graph
               </p>
