@@ -2,41 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* LAMAU PowerBrick Presentation Design System 
+All colors MUST be HSL for consistency and theming.
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark theme primary colors */
+    --background: 217 33% 5%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 215 28% 10%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 215 28% 10%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Brand colors */
+    --primary: 24 95% 53%;
+    --primary-foreground: 217 33% 5%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 197 71% 52%;
+    --secondary-foreground: 217 33% 5%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 215 20% 20%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 197 71% 52%;
+    --accent-foreground: 217 33% 5%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 215 20% 20%;
+    --input: 215 20% 15%;
+    --ring: 24 95% 53%;
 
-    --radius: 0.5rem;
+    /* Enhanced design tokens */
+    --radius: 0.75rem;
+    
+    /* Custom gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(24 85% 45%));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(197 61% 42%));
+    --gradient-dark: linear-gradient(180deg, hsl(217 33% 5%), hsl(215 28% 8%));
+    
+    /* Shadows with brand colors */
+    --shadow-primary: 0 20px 40px -12px hsl(var(--primary) / 0.3);
+    --shadow-secondary: 0 20px 40px -12px hsl(var(--secondary) / 0.2);
+    --shadow-elegant: 0 10px 30px -10px hsl(217 33% 2% / 0.5);
+    
+    /* Animation timings */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s ease-out;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +119,54 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* Smooth scrolling for navigation */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero button variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-orange-500 text-primary-foreground font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary/20 text-secondary border border-secondary/30 hover:bg-secondary/30 transition-all duration-300;
+  }
+  
+  /* Card variants */
+  .card-stat {
+    @apply bg-card/50 backdrop-blur-sm border border-border/50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105;
+  }
+  
+  .card-content {
+    @apply bg-card/30 backdrop-blur-sm border border-border/30 rounded-xl p-8 shadow-lg;
+  }
+  
+  /* Animation utilities */
+  .slide-enter {
+    @apply opacity-0 translate-y-8;
+  }
+  
+  .slide-enter-active {
+    @apply opacity-100 translate-y-0 transition-all duration-700 ease-out;
+  }
+  
+  .fade-in-up {
+    @apply animate-fade-in;
+  }
+  
+  /* Text gradients */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-orange-400 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-secondary {
+    @apply bg-gradient-to-r from-secondary to-cyan-400 bg-clip-text text-transparent;
   }
 }
