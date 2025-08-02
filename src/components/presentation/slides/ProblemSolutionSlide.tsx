@@ -33,7 +33,7 @@ export const ProblemSolutionSlide = () => {
             <div className="text-center">
             <div className="w-full max-w-xl aspect-[4/3] rounded-xl overflow-hidden shadow-md bg-muted/30 mb-4">
               <img
-                src="/images/battery-graph.png"
+                src={`${import.meta.env.BASE_URL}images/battery-graph.png`}
                 alt="Battery Discharge Cycle Graph"
                 className="w-full h-full object-contain"
               />
