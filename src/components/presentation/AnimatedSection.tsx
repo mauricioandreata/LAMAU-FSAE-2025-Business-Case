@@ -40,9 +40,9 @@ export const AnimatedSection = ({ children, className }: AnimatedSectionProps) =
     <section
       ref={sectionRef}
       className={cn(
-        "min-h-screen w-full flex flex-col justify-center items-center relative px-4 md:px-8 py-16 transition-all duration-700",
+        "min-h-screen w-full flex flex-col justify-center items-center relative px-4 md:px-8 py-16 transition-all duration-1000",
         isVisible ? "opacity-100" : "opacity-0",
-        hasAnimated && isVisible ? "animate-fade-in" : "",
+        hasAnimated && isVisible ? "animate-elastic-in" : "",
         className
       )}
     >
