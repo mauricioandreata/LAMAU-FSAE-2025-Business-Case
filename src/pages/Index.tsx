@@ -1,7 +1,7 @@
-import { PresentationApp } from "@/components/presentation/PresentationApp";
+import { ScrollingPresentation } from "@/components/presentation/ScrollingPresentation";
 
 const Index = () => {
-  return <PresentationApp />;
+  return <ScrollingPresentation />;
 };
 
 export default Index;
